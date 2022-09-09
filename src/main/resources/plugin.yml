@@ -1,4 +1,4 @@
 name: DisableZombieSieges
-version: 1.0.0
+version: 2.0.0
 main: com.floogoobooq.blackomega.disablezombiesieges.DisableZombieSieges
-api-version: 1.18
+api-version: 1.19

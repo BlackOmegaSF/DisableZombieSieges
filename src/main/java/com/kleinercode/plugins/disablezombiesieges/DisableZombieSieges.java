@@ -1,4 +1,4 @@
-package com.floogoobooq.blackomega.disablezombiesieges;
+package com.kleinercode.plugins.disablezombiesieges;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

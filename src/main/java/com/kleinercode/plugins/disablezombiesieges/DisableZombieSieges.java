@@ -14,11 +14,6 @@ public class DisableZombieSieges extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(this, this);
     }
 
-    @Override
-    public void onDisable() {
-
-    }
-
     @EventHandler
     public void spawnFromSiege(CreatureSpawnEvent event) {
         if (event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.VILLAGE_INVASION) { //If mob is spawned due to invasion

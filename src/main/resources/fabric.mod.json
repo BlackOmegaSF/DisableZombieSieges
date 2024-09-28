@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "disable-zombie-sieges",
+  "version": "${version}",
+  "name": "Disable Zombie Sieges",
+  "description": "A server-side mod to disable zombie sieges.",
+  "authors": [
+    "Kian Leiner"
+  ],
+  "icon": "assets/disable-zombie-sieges/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "server": [
+      "com.kleinercode.fabric.DisableZombieSieges"
+    ]
+  },
+  "mixins": [
+    "disable-zombie-sieges.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.2",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+
+}

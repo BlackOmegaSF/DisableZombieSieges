@@ -1,4 +1,0 @@
-name: DisableZombieSieges
-version: 3.0.0
-main: com.kleinercode.plugins.disablezombiesieges.DisableZombieSieges
-api-version: 1.21

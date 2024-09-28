@@ -7,6 +7,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import static com.kleinercode.fabric.DisableZombieSieges.ENABLE_ZOMBIE_SIEGES;
+
 @Mixin(ZombieSiegeManager.class)
 public class SiegeManagerSpawnMixin {
 
@@ -14,6 +16,8 @@ public class SiegeManagerSpawnMixin {
 
     @Inject(method = "spawn(Lnet/minecraft/server/world/ServerWorld;ZZ)I", at = @At("HEAD"), cancellable = true)
     private void onSiegeSpawnCheck(final ServerWorld world, final boolean spawnMonsters, final boolean spawnAnimals, final CallbackInfoReturnable<Integer> info) {
-        info.setReturnValue(0);
+        if (!world.getGameRules().getBoolean(ENABLE_ZOMBIE_SIEGES)) {
+            info.setReturnValue(0);
+        }
     }
 }

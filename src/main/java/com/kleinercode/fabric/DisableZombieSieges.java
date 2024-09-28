@@ -2,6 +2,9 @@ package com.kleinercode.fabric;
 
 import net.fabricmc.api.DedicatedServerModInitializer;
 import net.fabricmc.fabric.api.event.EventFactory;
+import net.fabricmc.fabric.api.gamerule.v1.GameRuleFactory;
+import net.fabricmc.fabric.api.gamerule.v1.GameRuleRegistry;
+import net.minecraft.world.GameRules;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,12 +14,13 @@ public class DisableZombieSieges implements DedicatedServerModInitializer {
 
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+    public static final GameRules.Key<GameRules.BooleanRule> ENABLE_ZOMBIE_SIEGES =
+            GameRuleRegistry.register("enableZombieSieges", GameRules.Category.MOBS, GameRuleFactory.createBooleanRule(true));
+
     @Override
     public void onInitializeServer() {
 
-        //TODO make custom gamerule for sieges
-
-        LOGGER.info("Zombie sieges are disabled in this world!");
+        LOGGER.info("enableZombieSieges gamerule added!");
 
     }
 

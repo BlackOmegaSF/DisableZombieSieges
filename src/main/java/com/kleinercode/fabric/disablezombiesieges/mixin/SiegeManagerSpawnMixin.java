@@ -1,4 +1,4 @@
-package com.kleinercode.fabric.mixin;
+package com.kleinercode.fabric.disablezombiesieges.mixin;
 
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.village.ZombieSiegeManager;
@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static com.kleinercode.fabric.DisableZombieSieges.ENABLE_ZOMBIE_SIEGES;
+import static com.kleinercode.fabric.disablezombiesieges.DisableZombieSieges.ENABLE_ZOMBIE_SIEGES;
 
 @Mixin(ZombieSiegeManager.class)
 public class SiegeManagerSpawnMixin {

@@ -1,4 +1,4 @@
-package com.kleinercode.fabric;
+package com.kleinercode.fabric.disablezombiesieges;
 
 import net.fabricmc.api.DedicatedServerModInitializer;
 import net.fabricmc.fabric.api.event.EventFactory;

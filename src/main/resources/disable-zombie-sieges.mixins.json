@@ -6,7 +6,7 @@
   "mixins": [],
   "client": [],
   "server": [
-    "SiegeManagerSpawnMixin"
+    "com.kleinercode.fabric.disablezombiesieges.mixin.SiegeManagerSpawnMixin"
   ],
   "injectors": {
     "defaultRequire": 1

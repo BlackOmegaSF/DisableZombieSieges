@@ -11,17 +11,16 @@
   "environment": "server",
   "entrypoints": {
     "server": [
-      "com.kleinercode.fabric.DisableZombieSieges"
+      "com.kleinercode.fabric.disablezombiesieges.DisableZombieSieges"
     ]
   },
   "mixins": [
     "disable-zombie-sieges.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.16.2",
-    "minecraft": "~1.21.1",
-    "java": ">=21",
-    "fabric-api": "*"
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
   }
 
 }

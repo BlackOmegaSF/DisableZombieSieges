@@ -1,12 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.kleinercode.fabric.mixin",
+  "package": "com.kleinercode.fabric.disablezombiesieges.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [],
   "client": [],
   "server": [
-    "com.kleinercode.fabric.disablezombiesieges.mixin.SiegeManagerSpawnMixin"
+    "SiegeManagerSpawnMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -14,10 +14,10 @@ public class SiegeManagerSpawnMixin {
 
     // Makes spawn method always return 0
 
-    @Inject(method = "spawn(Lnet/minecraft/server/world/ServerWorld;ZZ)I", at = @At("HEAD"), cancellable = true)
-    private void onSiegeSpawnCheck(final ServerWorld world, final boolean spawnMonsters, final boolean spawnAnimals, final CallbackInfoReturnable<Integer> info) {
+    @Inject(method = "spawn(Lnet/minecraft/server/world/ServerWorld;)Z", at = @At("HEAD"), cancellable = true)
+    private void onSiegeSpawnCheck(ServerWorld world, CallbackInfoReturnable<Boolean> cir) {
         if (!world.getGameRules().getBoolean(ENABLE_ZOMBIE_SIEGES)) {
-            info.setReturnValue(0);
+            cir.setReturnValue(false);
         }
     }
 }

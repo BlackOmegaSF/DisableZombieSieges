@@ -2,8 +2,9 @@ package com.kleinercode.fabric.disablezombiesieges;
 
 import net.fabricmc.api.DedicatedServerModInitializer;
 import net.fabricmc.fabric.api.gamerule.v1.GameRuleBuilder;
-import net.minecraft.util.Identifier;
-import net.minecraft.world.rule.GameRule;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.level.gamerules.GameRule;
+import net.minecraft.world.level.gamerules.GameRuleCategory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,8 +14,11 @@ public class DisableZombieSieges implements DedicatedServerModInitializer {
 
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+    public static final Identifier GAMERULE_IDENTIFIER = Identifier.fromNamespaceAndPath("minecraft", "enable_zombie_sieges");
+
     public static final GameRule<Boolean> ENABLE_ZOMBIE_SIEGES = GameRuleBuilder.forBoolean(true)
-            .buildAndRegister(Identifier.of("kleinercode", "enableZombieSieges"));
+            .category(GameRuleCategory.MISC)
+            .buildAndRegister(GAMERULE_IDENTIFIER);
 
     @Override
     public void onInitializeServer() {

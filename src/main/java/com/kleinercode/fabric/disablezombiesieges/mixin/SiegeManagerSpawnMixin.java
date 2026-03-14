@@ -16,7 +16,7 @@ public class SiegeManagerSpawnMixin {
 
     @Inject(method = "spawn(Lnet/minecraft/server/world/ServerWorld;)Z", at = @At("HEAD"), cancellable = true)
     private void onSiegeSpawnCheck(ServerWorld world, CallbackInfoReturnable<Boolean> cir) {
-        if (!world.getGameRules().getBoolean(ENABLE_ZOMBIE_SIEGES)) {
+        if (!world.getGameRules().getValue(ENABLE_ZOMBIE_SIEGES)) {
             cir.setReturnValue(false);
         }
     }

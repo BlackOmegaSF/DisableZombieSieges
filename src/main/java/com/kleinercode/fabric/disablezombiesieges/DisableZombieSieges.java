@@ -23,7 +23,7 @@ public class DisableZombieSieges implements DedicatedServerModInitializer {
     @Override
     public void onInitializeServer() {
 
-        LOGGER.info("enableZombieSieges gamerule added!");
+        LOGGER.info("enable_zombie_sieges gamerule added!");
 
     }
 
